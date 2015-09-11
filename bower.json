@@ -1,0 +1,25 @@
+{
+  "name": "devfest-berlin.github.io",
+  "version": "1.0.0",
+  "homepage": "https://github.com/devfest-berlin/devfest-berlin.github.io",
+  "authors": [
+    "Stefan Hoth <stefanhoth.de@gmail.com>"
+  ],
+  "description": "DevFest Berlin landing page",
+  "keywords": [
+    "gdg",
+    "devfest",
+    "berlin"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "material-design-lite": "~1.0.4"
+  }
+}
