@@ -1,0 +1,180 @@
+/**
+ * Copyright 2015 Google Inc. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+html, body {
+  font-family: 'Roboto', 'Helvetica', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.mdl-layout__header-row {
+  padding-left: 40px;
+}
+.mdl-layout.is-small-screen .mdl-layout__header-row h3 {
+  font-size: inherit;
+}
+
+.mdl-card {
+  height: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.mdl-card > * {
+  height: auto;
+}
+
+.mdl-card .mdl-card__title-text {
+  margin: 20px;
+}
+
+.mdl-card .mdl-card__supporting-text {
+  margin: 40px;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 0;
+  color: inherit;
+  width: calc(100% - 80px);
+}
+.mdl-card__supporting-text h4 {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+.mdl-card__actions {
+  margin: 0;
+  padding: 4px 40px;
+  color: inherit;
+}
+.mdl-card__actions a {
+  color: #00BCD4;
+  margin: 0;
+}
+.mdl-card__actions a:hover,
+.mdl-card__actions a:active {
+  color: inherit;
+  background-color: transparent;
+}
+.mdl-card__supporting-text + .mdl-card__actions {
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
+}
+.mdl-demo #add {
+  position: absolute;
+  right: 40px;
+  top: 36px;
+  z-index: 999;
+}
+
+.mdl-layout__content section {
+  position: relative;
+  margin-top: 48px;
+}
+
+.mdl-layout__content section:last-of-type {
+  margin-bottom: 48px;
+}
+
+section.section--center {
+  max-width: 860px;
+}
+
+section > header{
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+section > header > .material-icons {
+  font-size: 3rem;
+}
+
+section > button {
+  position: absolute;
+  z-index: 99;
+  top: 8px;
+  right: 8px;
+}
+
+section .section__text {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+  padding-top: 8px;
+}
+
+section .section__text h5 {
+  font-size: inherit;
+  margin: 0;
+  margin-bottom: 0.5em;
+}
+
+section .section__text a {
+  text-decoration: none;
+}
+
+.mdl-menu__container {
+  z-index: 99;
+}
+
+
+/** start here */
+
+#welcome .mdl_card > .mdl-card__title {
+  color: #fff;
+  height: 176px;
+  background-color: ;
+}
+
+#welcome #redirect_cancel {
+	margin: 20px auto;
+	float: right;
+}
+
+section .mdl-card__actions.fullsize {
+	padding: 0;
+}
+
+section .mdl-card__actions.fullsize a {
+	display: block;
+	width: 100%;
+	height: auto;
+	padding: 10px 20px;
+	text-align: left;
+}
+
+
+h1.mdl-layout-title span {
+    font-size: 0.7em;
+}
