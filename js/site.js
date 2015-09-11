@@ -4,7 +4,7 @@
 var SITE_latestDevFestYear = 2015;
 var SITE_devfestUrl = "https://" + SITE_latestDevFestYear + ".devfest-berlin.de";
 
-var SITE_countdownSeconds = 10;
+var SITE_countdownSeconds = 5;
 var SITE_countdownStopped = false;
 
 // do countdown
