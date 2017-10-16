@@ -1,7 +1,7 @@
 // Global variables
 
 // edit this if the redirect should go somewhere else
-var SITE_latestDevFestYear = 2016;
+var SITE_latestDevFestYear = 2017;
 var SITE_devfestUrl = "https://" + SITE_latestDevFestYear + ".devfest-berlin.de";
 
 var SITE_countdownSeconds = 5;
