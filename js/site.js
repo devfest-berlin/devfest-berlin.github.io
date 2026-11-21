@@ -1,81 +1,82 @@
-// Global variables
+(function () {
+  'use strict';
 
-// edit this if the redirect should go somewhere else
-var SITE_latestDevFestYear = 2026;
-var SITE_devfestUrl = "https://" + SITE_latestDevFestYear + ".devfest-berlin.de";
+  // Edit these if the redirect should go somewhere else
+  var LATEST_DEVFEST_YEAR = 2026;
+  var DEVFEST_URL = 'https://' + LATEST_DEVFEST_YEAR + '.devfest-berlin.de';
+  var COUNTDOWN_SECONDS = 5;
 
-var SITE_countdownSeconds = 5;
-var SITE_countdownStopped = false;
+  var displayHost = DEVFEST_URL.replace(/^https?:\/\//, '');
+  var timerId = null;
+  var stopped = false;
 
-// do countdown
-function redirectToLatest() {
-  window.location = SITE_devfestUrl;
-}
-
-function updateCountdownText(seconds) {
-
-  text = 'You\'ll be redirected to <a href="{0}">{1}</a> in {2} seconds...';
-
-  document
-    .querySelector('#redirect_text')
-    .innerHTML = text.format(
-      SITE_devfestUrl,
-      SITE_devfestUrl.replace(/https?:\/\//g, ''),
-      seconds
-  );
-}
-
-function countdown(countdownSeconds) {
-
-  progress = (SITE_countdownSeconds - countdownSeconds) * (100 / SITE_countdownSeconds)
-
-  if (SITE_countdownStopped) {
-    console.log("Countdown stopped");
-    return;
-  }
-  else if (progress > 100) {
-    console.log("Redirecting now...");
-    redirectToLatest();
-    return;
+  function createLink() {
+    var link = document.createElement('a');
+    link.href = DEVFEST_URL;
+    link.textContent = displayHost;
+    return link;
   }
 
-  updateCountdownText(countdownSeconds);
+  function renderCountdownText(textEl, seconds) {
+    var unit = seconds === 1 ? 'second' : 'seconds';
+    textEl.replaceChildren(
+      document.createTextNode("You'll be redirected to "),
+      createLink(),
+      document.createTextNode(' in ' + seconds + ' ' + unit + '...')
+    );
+  }
 
-  document
-    .querySelector('#redirect_progress')
-    .MaterialProgress.setProgress(progress);
+  function renderCancelledText(textEl) {
+    textEl.replaceChildren(
+      document.createTextNode('Redirect cancelled. You can still visit '),
+      createLink(),
+      document.createTextNode('.')
+    );
+  }
 
+  document.addEventListener('DOMContentLoaded', function () {
+    var textEl = document.querySelector('#redirect_text');
+    var progressEl = document.querySelector('#redirect_progress');
+    var controlsEl = document.querySelector('#redirect_controls');
+    var cancelBtn = document.querySelector('#redirect_cancel');
 
-  setTimeout(function() {
-    countdown(--countdownSeconds)
-  }, 1000);
-}
+    if (!textEl || !progressEl || !controlsEl || !cancelBtn) {
+      return;
+    }
 
-window.addEventListener('load', function() {
-  countdown(SITE_countdownSeconds)
-});
+    progressEl.hidden = false;
+    controlsEl.hidden = false;
 
+    function tick(remaining) {
+      if (stopped) {
+        return;
+      }
 
+      var progress = ((COUNTDOWN_SECONDS - remaining) / COUNTDOWN_SECONDS) * 100;
+      progressEl.value = progress;
 
-// cancel countdown
-document
-  .querySelector('#redirect_cancel')
-  .addEventListener('click', function() {
+      if (remaining <= 0) {
+        window.location.assign(DEVFEST_URL);
+        return;
+      }
 
-    SITE_countdownStopped = true;
+      renderCountdownText(textEl, remaining);
+      timerId = window.setTimeout(function () {
+        tick(remaining - 1);
+      }, 1000);
+    }
 
-    document
-      .querySelector('#redirect_wrap')
-      .style.display = 'none';
-  });
-
-
-// First, checks if it isn't implemented yet.
-if (!String.prototype.format) {
-  String.prototype.format = function() {
-    var args = arguments;
-    return this.replace(/{(\d+)}/g, function(match, number) {
-      return typeof args[number] != 'undefined' ? args[number] : match;
+    cancelBtn.addEventListener('click', function () {
+      stopped = true;
+      if (timerId !== null) {
+        window.clearTimeout(timerId);
+        timerId = null;
+      }
+      progressEl.hidden = true;
+      controlsEl.hidden = true;
+      renderCancelledText(textEl);
     });
-  };
-}
+
+    tick(COUNTDOWN_SECONDS);
+  });
+})();

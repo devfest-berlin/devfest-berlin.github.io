@@ -3,196 +3,189 @@
 
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>DevFest Berlin Landing Page</title>
-    <link rel="Shortcut Icon" type="image/ico" href="favicon.ico">
+    <title>DevFest Berlin</title>
+    <meta name="description" content="DevFest Berlin — a yearly community-driven developer event organized by the Google Developer Groups in Berlin.">
+    <meta name="theme-color" content="#3f51b5">
+    <link rel="canonical" href="https://devfest-berlin.de/">
 
-    <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
-    <!--
-    <link rel="canonical" href="http://www.example.com/">
-    -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://devfest-berlin.de/">
+    <meta property="og:title" content="DevFest Berlin">
+    <meta property="og:description" content="A yearly community-driven developer event organized by the Google Developer Groups in Berlin.">
 
-    <link href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="bower_components/material-design-lite/material.min.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="css/custom.css">
+    <noscript>
+      <meta http-equiv="refresh" content="5;url=https://2026.devfest-berlin.de">
+    </noscript>
   </head>
 
-  <body class="mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
-    <div class="mdl-layout mdl-js-layout">
-      <header class="mdl-layout__header mdl-layout__header--waterfall">
-        <div class="mdl-layout--large-screen-only mdl-layout__header-row">
-          <h1 class="mdl-layout-title">DevFest Berlin
-            <span> - A weekend of developer awesomeness, once a year.</span>
-          </h1>
+  <body>
+    <div class="layout">
+      <header class="site-header">
+        <div class="container">
+          <h1 class="site-title">DevFest Berlin</h1>
+          <p class="site-tagline">A weekend of developer awesomeness, once a year.</p>
         </div>
       </header>
 
-      <main class="mdl-layout__content">
-        <div class="page-content">
-          <section id="welcome" class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--8dp">
-            <div class="mdl-card mdl-cell mdl-cell--12-col">
-              <div class="mdl-card__title">
-                <h2 class="mdl-card__title-text">Welcome to DevFest Berlin</h2>
-              </div>
-              <div class="mdl-card__supporting-text">
-                A yearly community-driven developer event organized by the 4 GDGs in Berlin: GDG Berlin, GDG Berlin Android, GDG Berlin Golang &amp; GDG Cloud Berlin
-              </div>
-              <div id="redirect_wrap" class="mdl-card__actions mdl-card--border">
-
-                <h5 id="redirect_text">...</h5>
-                <div id="redirect_progress" style="width: 100%" class="mdl-progress mdl-js-progress"></div>
-                <a id="redirect_cancel" class="mdl-button mdl-button--raised mdl-button--accent mdl-js-button mdl-js-ripple-effect">
+      <main class="site-main">
+        <div class="container">
+          <section id="welcome" class="card card--featured">
+            <div class="card__body">
+              <h2 class="card__title">Welcome to DevFest Berlin</h2>
+              <p class="card__text">
+                A yearly community-driven developer event organized by the 4 GDGs in Berlin:
+                GDG Berlin, GDG Berlin Android, GDG Berlin Golang &amp; GDG Cloud Berlin
+              </p>
+            </div>
+            <div id="redirect_wrap" class="card__actions">
+              <p id="redirect_text" class="redirect-text">
+                Redirecting to <a id="redirect_link" href="https://2026.devfest-berlin.de">2026.devfest-berlin.de</a>&hellip;
+              </p>
+              <progress id="redirect_progress" class="progress" value="0" max="100" aria-label="Redirect countdown" hidden></progress>
+              <div id="redirect_controls" class="redirect-controls" hidden>
+                <button type="button" id="redirect_cancel" class="btn btn--accent">
                   Cancel countdown, I want to stay here!
-                </a>
+                </button>
               </div>
             </div>
           </section>
 
-          <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
-            <div class="mdl-card mdl-cell mdl-cell--12-col">
-              <div class="mdl-card__title">
-                <h2 class="mdl-card__title-text">2025</h2>
-              </div>
-              <div class="fullsize mdl-card__actions mdl-card--border">
-                <a href="https://2025.devfest.berlin" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-                  Go to site <i class="material-icons">arrow_forward</i>
+          <section class="editions" aria-labelledby="past-editions-heading">
+            <h2 id="past-editions-heading" class="section-heading">Past Editions</h2>
+            <div class="editions__grid">
+              <article class="card edition-card">
+                <h3 class="edition-card__year">2025</h3>
+                <a href="https://2025.devfest.berlin" class="edition-card__link" aria-label="Go to DevFest Berlin 2025 site">
+                  Go to site
+                  <svg class="icon-arrow" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+                    <path fill="currentColor" d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
+                  </svg>
                 </a>
-              </div>
-            </div>
-          </section>
+              </article>
 
-          <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
-            <div class="mdl-card mdl-cell mdl-cell--12-col">
-              <div class="mdl-card__title">
-                <h2 class="mdl-card__title-text">2024</h2>
-              </div>
-              <div class="fullsize mdl-card__actions mdl-card--border">
-                <a href="https://pretix.eu/devfestberlin/2024/" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-                  Go to site <i class="material-icons">arrow_forward</i>
+              <article class="card edition-card">
+                <h3 class="edition-card__year">2024</h3>
+                <a href="https://pretix.eu/devfestberlin/2024/" class="edition-card__link" aria-label="Go to DevFest Berlin 2024 site">
+                  Go to site
+                  <svg class="icon-arrow" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+                    <path fill="currentColor" d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
+                  </svg>
                 </a>
-              </div>
-            </div>
-          </section>
+              </article>
 
-          <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
-            <div class="mdl-card mdl-cell mdl-cell--12-col">
-              <div class="mdl-card__title">
-                <h2 class="mdl-card__title-text">2019</h2>
-              </div>
-              <div class="fullsize mdl-card__actions mdl-card--border">
-                <a href="https://2019.devfest-berlin.de" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-                  Go to site <i class="material-icons">arrow_forward</i>
+              <article class="card edition-card">
+                <h3 class="edition-card__year">2023</h3>
+                <a href="https://gdg.community.dev/events/details/google-gdg-berlin-presents-devfest-2023-berlin/" class="edition-card__link" aria-label="Go to DevFest Berlin 2023 event page">
+                  Event page
+                  <svg class="icon-arrow" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+                    <path fill="currentColor" d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
+                  </svg>
                 </a>
-              </div>
-            </div>
-          </section>
+              </article>
 
-          <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
-            <div class="mdl-card mdl-cell mdl-cell--12-col">
-              <div class="mdl-card__title">
-                <h2 class="mdl-card__title-text">2016</h2>
-              </div>
-              <div class="fullsize mdl-card__actions mdl-card--border">
-                <a href="https://2016.devfest-berlin.de" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-                  Go to site <i class="material-icons">arrow_forward</i>
+              <article class="card edition-card">
+                <h3 class="edition-card__year">2019</h3>
+                <a href="https://2019.devfest-berlin.de" class="edition-card__link" aria-label="Go to DevFest Berlin 2019 site">
+                  Go to site
+                  <svg class="icon-arrow" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+                    <path fill="currentColor" d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
+                  </svg>
                 </a>
-              </div>
-            </div>
-          </section>
+              </article>
 
-          <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
-            <div class="mdl-card mdl-cell mdl-cell--12-col">
-              <div class="mdl-card__title">
-                <h2 class="mdl-card__title-text">2015</h2>
-              </div>
-              <div class="fullsize mdl-card__actions mdl-card--border">
-                <a href="https://2015.devfest-berlin.de" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-                  Go to site <i class="material-icons">arrow_forward</i>
+              <article class="card edition-card">
+                <h3 class="edition-card__year">2016</h3>
+                <a href="https://2016.devfest-berlin.de" class="edition-card__link" aria-label="Go to DevFest Berlin 2016 site">
+                  Go to site
+                  <svg class="icon-arrow" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+                    <path fill="currentColor" d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
+                  </svg>
                 </a>
-              </div>
-            </div>
-          </section>
+              </article>
 
-          <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
-            <div class="mdl-card mdl-cell mdl-cell--12-col">
-              <div class="mdl-card__title">
-                <h2 class="mdl-card__title-text">2014</h2>
-              </div>
-              <div class="fullsize mdl-card__actions mdl-card--border">
-                <a href="https://2014.devfest-berlin.de" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-                  Go to site <i class="material-icons">arrow_forward</i>
+              <article class="card edition-card">
+                <h3 class="edition-card__year">2015</h3>
+                <a href="https://2015.devfest-berlin.de" class="edition-card__link" aria-label="Go to DevFest Berlin 2015 site">
+                  Go to site
+                  <svg class="icon-arrow" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+                    <path fill="currentColor" d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
+                  </svg>
                 </a>
-              </div>
-            </div>
-          </section>
+              </article>
 
-          <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
-            <div class="mdl-card mdl-cell mdl-cell--12-col">
-              <div class="mdl-card__title">
-                <h2 class="mdl-card__title-text">2013</h2>
-              </div>
-              <div class="fullsize mdl-card__actions mdl-card--border">
-                <a href="https://2013.devfest-berlin.de" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-                  Go to site <i class="material-icons">arrow_forward</i>
+              <article class="card edition-card">
+                <h3 class="edition-card__year">2014</h3>
+                <a href="https://2014.devfest-berlin.de" class="edition-card__link" aria-label="Go to DevFest Berlin 2014 site">
+                  Go to site
+                  <svg class="icon-arrow" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+                    <path fill="currentColor" d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
+                  </svg>
                 </a>
-              </div>
+              </article>
+
+              <article class="card edition-card">
+                <h3 class="edition-card__year">2013</h3>
+                <a href="https://2013.devfest-berlin.de" class="edition-card__link" aria-label="Go to DevFest Berlin 2013 site">
+                  Go to site
+                  <svg class="icon-arrow" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+                    <path fill="currentColor" d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
+                  </svg>
+                </a>
+              </article>
+
+              <article class="card edition-card edition-card--archived">
+                <h3 class="edition-card__year">2012</h3>
+                <a href="https://web.archive.org/web/20121016013754/http://www.devfest.info/event/ag9zfmRldmZlc3RnbG9iYWxyDQsSBUV2ZW50GJOkAQw" class="edition-card__link" aria-label="View DevFest Berlin 2012 Wayback archive">
+                  Wayback archive
+                  <svg class="icon-arrow" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+                    <path fill="currentColor" d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
+                  </svg>
+                </a>
+              </article>
             </div>
           </section>
         </div>
       </main>
 
-      <footer class="mdl-mega-footer">
-        <div class="mdl-mega-footer--middle-section">
-          <div class="mdl-mega-footer--drop-down-section">
-            <input class="mdl-mega-footer--heading-checkbox" type="checkbox" checked>
-            <h1 class="mdl-mega-footer--heading">GDG Berlin Android</h1>
-            <ul class="mdl-mega-footer--link-list">
-              <li>
-                <a href="https://www.meetup.com/GDG-Android-in-Berlin/">Meetup.com</a>
-              </li>
-              <li>
-                <a href="https://bsky.app/profile/berlindroid.de">Bluesky</a>
-              </li>
+      <footer class="site-footer">
+        <div class="container footer-grid">
+          <div class="footer-col">
+            <h2 class="footer-heading">GDG Berlin Android</h2>
+            <ul class="footer-links">
+              <li><a href="https://www.meetup.com/GDG-Android-in-Berlin/">Meetup.com</a></li>
+              <li><a href="https://bsky.app/profile/berlindroid.de">Bluesky</a></li>
             </ul>
           </div>
-          <div class="mdl-mega-footer--drop-down-section">
-            <input class="mdl-mega-footer--heading-checkbox" type="checkbox" checked>
-            <h1 class="mdl-mega-footer--heading">GDG Berlin</h1>
-            <ul class="mdl-mega-footer--link-list">
-              <li>
-                <a href="https://www.meetup.com/gdgberlin/">Meetup.com</a>
-              </li>
-              <li>
-                <a href="https://twitter.com/gdgberlin">Twitter</a>
-              </li>
+
+          <div class="footer-col">
+            <h2 class="footer-heading">GDG Berlin</h2>
+            <ul class="footer-links">
+              <li><a href="https://www.meetup.com/gdgberlin/">Meetup.com</a></li>
+              <li><a href="https://twitter.com/gdgberlin">Twitter</a></li>
             </ul>
           </div>
-          <div class="mdl-mega-footer--drop-down-section">
-            <input class="mdl-mega-footer--heading-checkbox" type="checkbox" checked>
-            <h1 class="mdl-mega-footer--heading">GDG Berlin Golang</h1>
-            <ul class="mdl-mega-footer--link-list">
-              <li>
-                <a href="https://www.meetup.com/golang-users-berlin/">Meetup.com</a>
-              </li>
+
+          <div class="footer-col">
+            <h2 class="footer-heading">GDG Berlin Golang</h2>
+            <ul class="footer-links">
+              <li><a href="https://www.meetup.com/golang-users-berlin/">Meetup.com</a></li>
             </ul>
           </div>
-          <div class="mdl-mega-footer--drop-down-section">
-            <input class="mdl-mega-footer--heading-checkbox" type="checkbox" checked>
-            <h1 class="mdl-mega-footer--heading">GDG Cloud Berlin</h1>
-            <ul class="mdl-mega-footer--link-list">
-              <li>
-                <a href="https://gdg.community.dev/gdg-cloud-berlin/">GDG</a>
-              </li>
+
+          <div class="footer-col">
+            <h2 class="footer-heading">GDG Cloud Berlin</h2>
+            <ul class="footer-links">
+              <li><a href="https://gdg.community.dev/gdg-cloud-berlin/">GDG</a></li>
             </ul>
           </div>
         </div>
       </footer>
-
     </div>
-    <script src="bower_components/material-design-lite/material.min.js"></script>
+
     <script src="js/site.js"></script>
   </body>
 
